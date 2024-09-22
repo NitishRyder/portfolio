@@ -30,26 +30,30 @@ This repository was created to:
 
 A user-friendly web application to help users find and manage food ingredients based on recipes and serving sizes.
 Skills Used: React, Firebase Auth, Material UI
+
 2. High-Fidelity UI/UX Design for School App
 
 Conceptualized and designed a mobile application for a school, focusing on user-friendly experiences for students, teachers, and parents.
 Skills Used: Figma, Adobe XD
+
 3. Audi Web App Landing Page Clone
 
 Created a pixel-perfect, high-fidelity UI/UX clone of the Audi landing page, demonstrating my attention to visual detail and design proficiency.
 Skills Used: Figma
+
 📈 Future Updates
 
     I plan to continuously refine this portfolio with new projects, case studies, and design showcases. Stay tuned for the latest work in UI/UX Design, Machine Learning, Front-End Development, and more.
 
 🌐 Live Portfolio
 
-Explore my portfolio hosted on GitHub Pages: YourPortfolioURL
+Explore my portfolio hosted on GitHub Pages: 
+
 🤝 Get In Touch
 
 Feel free to explore, provide feedback, or reach out if you’re interested in collaboration or have any job opportunities:
 
-    Email: YourEmail@gmail.com
-    LinkedIn: linkedin.com/in/YourProfile
+    Email: nitishb057@gmail.com
+    LinkedIn: www.linkedin.com/in/nitish-b-97a3ba221
 
 Thank you for visiting!
