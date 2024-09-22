@@ -235,12 +235,14 @@ body{
 }
 
 .about .content .col-right .content-title{
+  margin-top: 8%;
   font-size: 2em;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .about .content .col-right .paragraph-text{
+  margin-top: 7%;
   font-size: 1em;
   text-align: justify;
   text-justify: inter-word;
@@ -358,14 +360,14 @@ body{
   border-radius: 10px;
 }
 
-.services .content .card .service-icon{
-  color: #3a6cf4;
+.services .content .card .service-icon img{
+  color: #000000;
   font-size: 8em;
   text-align: center;
   transition: transform 0.5s ease;
 }
 
-.services .content .card:hover .service-icon{
+.services .content .card:hover .service-icon img{
   transform: translateY(-10px);
 }
 
