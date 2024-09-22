@@ -50,3 +50,28 @@ function reveal(){
     }
   }
 }
+
+//to reveal hidden work
+document.getElementById('see-all-btn').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default link behavior
+  
+  const hiddenWorks = document.querySelectorAll('.hidden-work');
+  
+  // Check if the hidden items are currently displayed
+  if (hiddenWorks[0].style.display === 'block') {
+    // Hide the extra works
+    hiddenWorks.forEach(function(work) {
+      work.style.display = 'none';
+    });
+    // Change button text back to "See All"
+    this.textContent = 'See All';
+  } else {
+    // Show the hidden works
+    hiddenWorks.forEach(function(work) {
+      work.style.display = 'block';
+    });
+    // Change button text to "Show Less" (optional)
+    this.textContent = 'Show Less';
+  }
+});
+
