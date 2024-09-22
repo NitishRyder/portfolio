@@ -3,13 +3,14 @@
 Welcome to my Portfolio repository! Here you’ll find a showcase of my design, development, and project management skills. This portfolio represents my journey, expertise, and dedication to delivering high-quality, user-centered digital solutions.
 
 Hosted as a GitHub Pages site for easy navigation and future reference, this repository serves as a central hub for my work as I pursue new opportunities in UI/UX Design, Software Development, and beyond.
+
 🚀 Purpose
 
 This repository was created to:
 
-    Demonstrate my technical and creative skills in UI/UX Design, Web Development, and Project Management.
-    Provide potential employers and collaborators with a comprehensive view of my work and capabilities.
-    Facilitate easy access to live versions of my projects and detailed documentation.
+    - Demonstrate my technical and creative skills in UI/UX Design, Web Development, and Project Management.
+    - Provide potential employers and collaborators with a comprehensive view of my work and capabilities.
+    - Facilitate easy access to live versions of my projects and detailed documentation.
 
 🔑 Key Highlights
 
