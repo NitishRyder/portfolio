@@ -92,6 +92,7 @@ document.getElementById("sendBtn").addEventListener("click", function (event) {
   notification.innerHTML = "";
 
   // Validate fields
+
   // if (!name) {
   //   notification.innerHTML = "Please enter your name.";
   //   notification.classList.add("error");
@@ -121,13 +122,13 @@ document.getElementById("sendBtn").addEventListener("click", function (event) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!name || !email || !message) {
-    formStatus.innerHTML = '<span class="error-icon">&#10007;</span> Please fill out all fields.';
+    formStatus.innerHTML = '<span class="error-icon">&#10071;</span>Please fill out all fields.';
     formStatus.style.color = 'red';
   } else if (!emailPattern.test(email)) {
-    formStatus.innerHTML = '<span class="error-icon">&#10007;</span> Invalid email format.';
+    formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Invalid email format.';
     formStatus.style.color = 'red';
   } else {
-    formStatus.innerHTML = '<span class="success-icon">&#10003;</span> SENT!';
+    formStatus.innerHTML = '<span class="success-icon">&#10003;</span> SENT';
     formStatus.style.color = 'green';
   }
 

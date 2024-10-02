@@ -259,21 +259,26 @@ body{
   justify-content: space-between;
   color: #fff;
   margin-top: 20px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
+/* 
 .skills .content .col-left{
   position: relative;
   width: 46%;
   text-align: justify;
-}
+} */
 
-.skills .content .col-left .content-title{
+/* .skills .content .col-left .content-title{
   margin-bottom: 20px;
-}
+  
+} */
 
 .skills .content .col-right{
   position: relative;
   width: 46%;
+  
 }
 
 .skills .content .col-right .bar{
@@ -316,26 +321,26 @@ body{
 }
 
 .skills .content .col-right .bar .css:before{
-  width: 90%;
+  width: 80%;
   background: #0c73b8;
 }
 
 .skills .content .col-right .bar .javascript:before{
-  width: 80%;
+  width: 60%;
   background: #e3a324;
 }
 
 .skills .content .col-right .bar .jquery:before{
-  width: 80%;
+  width: 70%;
   background: #30dd6d;
 }
 
 .skills .content .col-right .bar .php:before{
-  width: 75%;
+  width: 55%;
   background: #6d7eb8;
 }
 
-.services .content{
+.education .content{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -348,7 +353,7 @@ body{
   width: 80%;
 }
 
-.services .content .card{
+.education .content .card{
   background: #fff;
   width: 340px;
   margin: 10px;
@@ -360,22 +365,22 @@ body{
   border-radius: 10px;
 }
 
-.services .content .card .service-icon img{
+.education .content .card .service-icon img{
   color: #000000;
   font-size: 8em;
   text-align: center;
   transition: transform 0.5s ease;
 }
 
-.services .content .card:hover .service-icon img{
+.education .content .card:hover .service-icon img{
   transform: translateY(-10px);
 }
 
-.services .content .card .info{
+.education .content .card .info{
   text-align: center;
 }
 
-.services .content .card .info h3{
+.education .content .card .info h3{
   color: #3a6cf4;
   font-size: 1.2em;
   font-weight: 700;
@@ -439,6 +444,66 @@ body{
 .hidden-work .card-img img:hover{
   transform: scale(1.1);
 }
+
+
+/* HONOURS & ACHIEVEMENTS */
+/* Basic styling for the section */
+#honours-achievements {
+  padding: 40px 20px;
+  background-color: #000016;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.achievement {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffff;
+  border-left: 4px solid #3a6cf4;
+  border-radius: 5px;
+}
+
+.achievement-title {
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.achievement-description {
+  margin: 5px 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.achievement-date {
+  font-style: italic;
+  color: #888;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .achievement {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .achievement-date {
+    margin-top: 10px;
+  }
+}
+
 
 .contact .content .row{
   display: flex;
@@ -511,21 +576,19 @@ body{
 
 .success-icon {
   color: green;
-  font-size: 20px;
-  text-align: center;
+  font-size: 18px;
 }
 
 .error-icon {
-  color: red;
-  font-size: 20px;
-  margin-right: 10px;
-  justify-content: center;
-  text-align: center;
+  color: #be1a32;
+  font-size: 18px;
+  
 }
 
 #formStatus {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
+  text-align: center;
 }
 
 
