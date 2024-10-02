@@ -423,52 +423,21 @@ body{
 }
 
 .hidden-work{
-  background: #000016;
+  display: none;
 }
 
-.hidden-work{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+/* .hidden-work .card-img img{
 
-.hidden-work{
-  width: 345px;
-  margin: 15px;
-  margin-left: 10%;
-}
-
-.hidden-work .card-img{
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.hidden-work .card-img img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  margin-left: 0%;
+  width: 350px; 
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  transition: 0.5s ease;
-}
+  transition:.5s ease;
+} */
 
 .hidden-work .card-img img:hover{
   transform: scale(1.1);
-}
-
-.contact .content{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 20px;
 }
 
 .contact .content .row{
@@ -476,46 +445,6 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-}
-
-.contact .content .row .card{
-  background: #fff;
-  width: 240px;
-  margin: 20px;
-  padding: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-  border-radius: 10px;
-}
-
-.contact .content .row .card .contact-icon{
-  color: #3a6cf4;
-  font-size: 4em;
-  text-align: center;
-  transition: transform 0.5s ease;
-}
-
-.contact .content .row .card:hover .contact-icon{
-  transform: translateY(-10px);
-}
-
-.contact .content .row .card .info{
-  text-align: center;
-}
-
-.contact .content .row .card .info h3{
-  color: #111;
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 10px;
-}
-
-.contact .content .row .card .info span{
-  color: #666;
-  font-weight: 500;
 }
 
 .contact-form{
@@ -570,8 +499,150 @@ body{
 
 .contact-form .input-box .send-btn:hover{
   background: #3a6cf4;
+} */
+
+.notification {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+  text-align: center;
 }
 
+.success-icon {
+  color: green;
+  font-size: 20px;
+  text-align: center;
+}
+
+.error-icon {
+  color: red;
+  font-size: 20px;
+  margin-right: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+#formStatus {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+
+
+/* ----------------------------------------------------------------------- */
+
+.footer {
+  background: #000016;
+  padding: 30px 0px; /* Padding for top and bottom */
+  color: #ffffff;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Wrap for responsive */
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+  flex: 1; /* Each column takes equal space */
+  min-width: 220px; /* Minimum width for columns */
+  margin: 0 15px; /* Margin between columns */
+}
+
+.footer-info h3,
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 20px; /* Heading size */
+  margin-bottom: 10px; /* Spacing below headings */
+}
+
+.footer-info p,
+.footer-links ul,
+.footer-contact p {
+  color: #aaa;
+  font-size: 14px; /* Smaller font size */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  padding: 5px 0; /* Spacing for list items */
+  position: relative;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  position: relative;
+}
+.footer-links ul li a:hover {
+  color: #3a6cf4;
+}
+
+.footer-links ul li a::after {
+  content: ""; /* Create an empty content for the underline */
+  position: absolute; /* Position the underline absolutely */
+  left: 0; /* Start at the left of the text */
+  right: 0; /* Extend to the right of the text */
+  bottom: -2px; /* Position it just below the text */
+  height: 2px; /* Height of the underline */
+  background-color: #3a6cf4; /* Color of the underline */
+  transform: scaleX(0); /* Start hidden (scaled down) */
+  transition: transform 0.3s ease; /* Animation for the scale */
+}
+.footer-links ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-contact .social-links a {
+  font-size: 20px; /* Size of social icons */
+  margin-right: 10px; /* Spacing between icons */
+  color: #ffffff; /* Icon color */
+  transition: color 0.3s;
+}
+
+.footer-contact .social-links a:hover {
+  color: #3a6cf4; /* Change color on hover */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+  /* padding: 10px 0; Padding for bottom */
+  text-align: center;
+  font-size: 14px; /* Smaller font size */
+  color: #8b8b8b;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column; /* Stack columns vertically */
+    text-align: center; /* Center text */
+  }
+
+  .footer-info,
+  .footer-links,
+  .footer-contact {
+   margin-bottom: 20px; /* Space between stacked columns */
+  }
+}
+
+/* 
 .footer{
   background: #000016;
   color: #fff;
@@ -593,7 +664,7 @@ body{
   color: #3a6cf4;
   font-weight: 600;
   text-decoration: none;
-}
+} */
 
 @media (max-width: 1040px){
   header{
