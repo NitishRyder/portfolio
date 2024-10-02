@@ -604,13 +604,14 @@ body{
 
 .footer .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 180px;
   padding: 0 20px;
+  justify-content: center;
 }
 
 .footer .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap; /* Wrap for responsive */
 }
 
@@ -618,8 +619,8 @@ body{
 .footer-links,
 .footer-contact {
   flex: 1; /* Each column takes equal space */
-  min-width: 220px; /* Minimum width for columns */
-  margin: 0 15px; /* Margin between columns */
+  min-width: 280px; /* Minimum width for columns */
+  margin: 0 20px; /* Margin between columns */
 }
 
 .footer-info h3,
@@ -647,7 +648,7 @@ body{
 }
 
 .footer-links ul li a {
-  color: #fff;
+  color: #aaa;
   text-decoration: none;
   transition: color 0.3s;
   position: relative;
@@ -696,6 +697,7 @@ body{
   .footer .row {
     flex-direction: column; /* Stack columns vertically */
     text-align: center; /* Center text */
+    margin-left: 0;
   }
 
   .footer-info,
@@ -704,30 +706,6 @@ body{
    margin-bottom: 20px; /* Space between stacked columns */
   }
 }
-
-/* 
-.footer{
-  background: #000016;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-}
-
-.footer .footer-title{
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.footer p{
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-.footer p a{
-  color: #3a6cf4;
-  font-weight: 600;
-  text-decoration: none;
-} */
 
 @media (max-width: 1040px){
   header{
