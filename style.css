@@ -488,6 +488,114 @@ body{
   transform: scale(1.1);
 }
 
+/* CERTIFICATIONS */
+
+/* Certifications Section */
+.certifications {
+  padding: 50px 0; /* Reduced padding */
+  background: #f5f7fa;
+}
+
+.certifications .title {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced space */
+}
+
+.section-title {
+  color: #3a6cf4;
+  font-size: 2em; /* Slightly smaller title */
+  font-weight: 800;
+  margin-bottom: 40px; /* Reduced margin */
+}
+
+.certifications-timeline {
+  position: relative;
+  max-width: 750px; /* Reduced width */
+  margin: 0 auto;
+}
+
+.certification-item {
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+
+.certification-content {
+  background: #fff;
+  padding: 15px; /* Reduced padding inside content */
+  border-radius: 8px; /* Slightly smaller border radius */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  transition: 0.3s;
+}
+
+.certification-content h3 {
+  margin: 0;
+  color: #00144b;
+  font-size: 1.4em; /* Smaller text */
+  font-weight: 600;
+}
+
+.certification-content span {
+  display: block;
+  margin-top: 5px; /* Reduced margin */
+  font-size: 0.85em; /* Smaller date text */
+  color: #666;
+}
+
+.certification-content:hover {
+  background: #3a6cf4;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.certification-content:hover h3,
+.certification-content:hover span {
+  color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .certifications-timeline {
+    padding: 0 20px; /* Reduced padding */
+  }
+
+  .certification-item {
+    padding-left: 30px; /* Reduced padding */
+  }
+
+  .certification-item:before {
+    left: -6px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .certification-content h3 {
+    font-size: 1.2em; /* Smaller font for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.6em; /* Slightly smaller title on mobile */
+    margin-bottom: 30px;
+  }
+
+  .certification-content {
+    padding: 10px; /* Reduced padding for mobile */
+  }
+
+  .certification-item {
+    padding-left: 25px; /* More compact */
+  }
+
+  .certification-item:before {
+    left: -5px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+
 
 /* HONOURS & ACHIEVEMENTS */
 /* Basic styling for the section */
@@ -497,7 +605,7 @@ body{
 }
 
 .container {
-  max-width: 1200px;
+  max-width:750px;
   margin: 0 auto;
 }
 
