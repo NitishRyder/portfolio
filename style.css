@@ -736,15 +736,15 @@ body{
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
+/* FOOTER */
 /* Responsive adjustments */
-@media (max-width: 368px) {
+@media (max-width: 380px) {
   .footer .row{
     display: flex;
     flex-direction: column; /* Stack columns vertically */
     text-align: center; /* Center text */
     width: 100%;
-    margin-left: 0%;
+    margin-left: 0;
 
   }
   .footer-info,
@@ -771,7 +771,7 @@ body{
   }
 }
 
-@media(max-width: 1700px){
+@media(max-width: 1760px){
   .footer .row{
     margin-left: 10%;
   }
