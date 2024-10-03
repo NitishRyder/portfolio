@@ -110,6 +110,8 @@ section{
   
 }
 
+/* HEADER CSS */
+
 header{
   z-index: 999;
   position: fixed;
@@ -129,33 +131,74 @@ header.sticky{
   padding: 10px 200px;
 }
 
-header .brand{
+header .brand {
   color: #fff;
   font-size: 1.8em;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
 }
 
-header .navigation{
-  position: relative;
+header .brand:hover {
+  color: #3a6cf4; /* Change the color on hover */
+  transform: scale(1); /* Slightly enlarge the text on hover */
+  text-decoration: none; /* Ensure no underline appears */
 }
 
-header .navigation a{
+header.sticky .brand:hover{
+  color: #00144b;
+}
+
+
+/* Navigation link styles */
+header .navigation a {
   color: #fff;
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
   margin-left: 30px;
+  position: relative; /* To position the underline relative to the link */
 }
 
-header .navigation a:hover{
+/* Hover color change */
+header .navigation a:hover {
   color: #3a6cf4;
 }
 
-header.sticky .navigation a:hover{
-  color: #000;
+/* Add underline on hover */
+header .navigation a::after {
+  content: ""; /* Create an empty content for the underline */
+  position: absolute; /* Position the underline absolutely */
+  left: 0; /* Start at the left of the text */
+  right: 0; /* Extend to the right of the text */
+  bottom: -2px; /* Position it just below the text */
+  height: 2px; /* Height of the underline */
+  background-color: #3a6cf4; /* Color of the underline */
+  transform: scaleX(0); /* Start hidden (scaled down) */
+  transition: transform 0.3s ease; /* Animation for the scale */
 }
+
+/* On hover, scale the underline to full width */
+header .navigation a:hover::after {
+  transform: scaleX(1); /* Full width of the text */
+}
+
+/* Sticky state with hover and underline */
+header.sticky .navigation a:hover {
+  color: #00144b;
+}
+
+header.sticky .navigation a::after {
+  background-color: #00144b; /* Color of the underline when sticky */
+}
+
+header.sticky .navigation a:hover::after {
+  transform: scaleX(1); /* Animate the underline when sticky as well */
+}
+
+
+/* BODY CSS */
 
 body{
   min-height: 110vh;
@@ -497,6 +540,7 @@ body{
   .achievement {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 20px;
   }
 
   .achievement-date {
@@ -602,12 +646,12 @@ body{
   color: #ffffff;
 }
 
-.footer .container {
+/* .footer .container {
   max-width: 1200px;
   margin: 0 180px;
   padding: 0 20px;
   justify-content: center;
-}
+} */
 
 .footer .row {
   display: flex;
@@ -692,12 +736,32 @@ body{
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .footer .row {
+@media (max-width: 368px) {
+  .footer .row{
+    display: flex;
     flex-direction: column; /* Stack columns vertically */
     text-align: center; /* Center text */
-    margin-left: 0;
+    width: 100%;
+    margin-left: 0%;
+
+  }
+  .footer-info,
+  .footer-links,
+  .footer-contact {
+   margin-bottom: 20px; /* Space between stacked columns */
+  }
+}
+
+
+@media (max-width: 750px) {
+  .footer .row {
+    margin-right: 10%;
+    flex-direction: column; /* Stack columns vertically */
+    text-align: center; /* Center text */
+    align-items: center;
+
   }
 
   .footer-info,
@@ -707,6 +771,13 @@ body{
   }
 }
 
+@media(max-width: 1700px){
+  .footer .row{
+    margin-left: 10%;
+  }
+}
+
+/* header */
 @media (max-width: 1040px){
   header{
     padding: 12px 20px;
@@ -816,6 +887,11 @@ body{
 
   .contact-form{
     padding: 35px 40px;
+  }
+
+  .footer .container .row{
+    text-align: center;
+    align-items: center;
   }
 }
 
