@@ -277,6 +277,20 @@ body{
   border-radius: 10px;
 }
 
+
+  /* For smooth transition */
+.about .content .col-left .img-card img {
+  transition: transform 0.5s ease;
+  border-radius: 10px; /* Optional: adds a slight border-radius */
+}
+
+/* Zoom & Shadow effect on hover */
+.about .content .col-left .img-card img:hover {
+  transform: scale(1.09); /* Zooms the image by 10% */
+  transform: scale(1.1); /* Zoom effect */
+  box-shadow: 0px 6px 9px #3a6cf4; /* Adds shadow on hover */
+}
+
 .about .content .col-right .content-title{
   margin-top: 8%;
   font-size: 2em;
@@ -290,6 +304,21 @@ body{
   text-align: justify;
   text-justify: inter-word;
 }
+
+/* Default state */
+.fa-arrow-down {
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ffffff; /* Default color */
+  font-size: 14px; /* Adjust the size as needed */
+}
+
+/* Hover effect */
+.fa-arrow-down:hover {
+  transform: translateY(2px); /* Moves the arrow downward by 5px */
+}
+
+
+/* SKILLS */
 
 .skills{
   background: #000016;
