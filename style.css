@@ -24,6 +24,34 @@ section{
   background-attachment: fixed;
 }
 
+@media(max-width: 368px){
+  .main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/home.jpeg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .animated-text{
+    position: relative;
+    height: 70px;
+    width: 308px;
+    overflow: hidden;
+  }
+  .animated-text h3{
+    color: #4e9eff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 1px;
+  }
+}
+
 .main .content{
   max-width: 800px;
 }
@@ -551,6 +579,7 @@ body{
 
 .certification-content {
   background: #fff;
+  margin-right: 5%;
   padding: 15px; /* Reduced padding inside content */
   border-radius: 8px; /* Slightly smaller border radius */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
