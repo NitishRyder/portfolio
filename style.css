@@ -332,6 +332,12 @@ body{
   text-align: justify;
   text-justify: inter-word;
 }
+/* 
+@media(max-width: 368px){
+  .about .content .col-right .btn{
+    width: 90px;
+  }
+} */
 
 /* Default state */
 .fa-arrow-down {
@@ -485,6 +491,24 @@ body{
   font-size: 1.2em;
   font-weight: 700;
   margin: 10px;
+}
+
+@media(max-width: 368px){
+  
+  .education .content .card .service-icon img{
+    margin-right: 5em;
+  }
+
+  .education .content .card .service-icon img{
+    color: #000000;
+    font-size: 5em;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .education .content .card:hover .service-icon img{
+    transform: translateY(-10px);
+  }
 }
 
 .work{
@@ -914,7 +938,6 @@ body{
     margin-left: 0%;
   }
 }
-
 
 @media (max-width: 750px) {
   .footer .row {
