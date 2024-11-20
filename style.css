@@ -773,7 +773,7 @@ body{
     font-size: 22px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   #honours-achievements h2{
     font-size: 18px;
   }
