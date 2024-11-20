@@ -38,8 +38,46 @@ section{
     background-attachment: fixed;
   }
   .content{
+    font-size: 15.5px;
+  }
+  
+  .animated-text{
+    position: relative;
+    height: 40px; /* Reduced height */
+    width: 380px; /* Reduced width */
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .animated-text h3{
+    color: #4e9eff;
+    font-size: 10px; /* Smaller font size */
+    width: 280px; /* Match the container width */
+    font-weight: 600;
+    line-height: 40px; /* Adjust to the new height */
+    letter-spacing: 0.5px; /* Reduced letter spacing */
+  }
+  /* On hover, scale the underline to full width */
+header .navigation a:hover::after {
+  transform: scaleX(1); /* Full width of the text */
+}
+}
+@media(max-width: 368px){
+
+  .main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/home.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .content{
     font-size: 10.5px;
   }
+  
   .animated-text{
     position: relative;
     height: 40px; /* Reduced height */
@@ -59,6 +97,7 @@ section{
 header .navigation a:hover::after {
   transform: scaleX(1); /* Full width of the text */
 }
+
 }
 
 .main .content{
@@ -328,6 +367,24 @@ body{
   text-justify: inter-word;
 }
 
+@media(max-width:570px){
+  .about .content .col-right .content-title{
+    margin-top: 8%;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+}
+
+@media(max-width: 460px){
+  #about h2{
+    font-size: 22px;
+  }
+  #about .paragraph-text{
+    font-size: 13px;
+  }
+}
+
 /* Default state */
 .fa-arrow-down {
   transition: transform 0.3s ease, color 0.3s ease;
@@ -489,6 +546,15 @@ body{
   }
 }
 
+@media(max-width: 460px){
+  #education h2{
+    font-size: 22px;
+  }
+  #education .info{
+    font-size: 14px;
+  }
+}
+
 .work{
   background: #000016;
 }
@@ -535,6 +601,12 @@ body{
 
 .hidden-work .card-img img:hover{
   transform: scale(1.1);
+}
+
+@media(max-width: 460px){
+  #work h2{
+    font-size: 22px;
+  }
 }
 
 /* CERTIFICATIONS */
@@ -620,13 +692,13 @@ body{
   }
 
   .certification-content h3 {
-    font-size: 1.2em; /* Smaller font for mobile */
+    font-size: 1em; /* Smaller font for mobile */
   }
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 1.6em; /* Slightly smaller title on mobile */
+  #certifications h2{
+    font-size: 22px; /* Slightly smaller title on mobile */
     margin-bottom: 30px;
   }
 
@@ -643,8 +715,10 @@ body{
     width: 12px;
     height: 12px;
   }
+  #certification .certification-content h3{
+    font-size: 12px;
+  }
 }
-
 
 
 /* HONOURS & ACHIEVEMENTS */
@@ -692,6 +766,17 @@ body{
   font-style: italic;
   color: #888;
   white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  #honours-achievements h2{
+    font-size: 22px;
+  }
+}
+@media (max-width: 375px) {
+  #honours-achievements h2{
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -794,8 +879,17 @@ body{
 }
 
 
+@media(max-width: 460px){
+  #contact h2{
+    font-size: 22px;
+  }
+}
 
-
+@media(max-width: 260px){
+  #contact h2{
+    font-size: 20px;
+  }
+}
 /* ----------------------------------------------------------------------- */
 
 .footer {
@@ -899,12 +993,23 @@ body{
 @media (max-width: 368px) {
   .footer .row{
     margin-left: 0%;
+    text-align: center;
+    
   }
   .footer-info,
   .footer-links,
   .footer-contact{
     margin-left: 0%;
   }
+
+  .footer-info p{
+    font-size: 14px;
+  }
+  .footer .row .footer-info h4 {
+    font-size: 14px;
+    margin-left: 0px;
+  }
+
 }
 
 @media (max-width: 750px) {
@@ -1051,6 +1156,11 @@ body{
   }
 }
 
+@media(max-width: 460px){
+  #skills h2{
+    font-size: 22px;
+  }
+}
 
 
 .scrollToTop-btn{
@@ -1089,3 +1199,4 @@ body{
   transform: translateY(0);
   opacity: 1;
 }
+
