@@ -24,32 +24,41 @@ section{
   background-attachment: fixed;
 }
 
-@media(max-width: 368px){
+@media(max-width: 468px){
+
   .main{
     position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(images/home.jpeg)no-repeat;
+    background: url(images/home.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
-
+  .content{
+    font-size: 10.5px;
+  }
   .animated-text{
     position: relative;
-    height: 70px;
-    width: 308px;
+    height: 40px; /* Reduced height */
+    width: 280px; /* Reduced width */
     overflow: hidden;
+    white-space: nowrap;
   }
   .animated-text h3{
     color: #4e9eff;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 70px;
-    letter-spacing: 1px;
+    font-size: 10px; /* Smaller font size */
+    width: 280px; /* Match the container width */
+    font-weight: 600;
+    line-height: 40px; /* Adjust to the new height */
+    letter-spacing: 0.5px; /* Reduced letter spacing */
   }
+  /* On hover, scale the underline to full width */
+header .navigation a:hover::after {
+  transform: scaleX(1); /* Full width of the text */
+}
 }
 
 .main .content{
@@ -212,20 +221,6 @@ header .navigation a:hover::after {
   transform: scaleX(1); /* Full width of the text */
 }
 
-/* Sticky state with hover and underline */
-header.sticky .navigation a:hover {
-  color: #00144b;
-}
-
-header.sticky .navigation a::after {
-  background-color: #00144b; /* Color of the underline when sticky */
-}
-
-header.sticky .navigation a:hover::after {
-  transform: scaleX(1); /* Animate the underline when sticky as well */
-}
-
-
 /* BODY CSS */
 
 body{
@@ -332,12 +327,6 @@ body{
   text-align: justify;
   text-justify: inter-word;
 }
-/* 
-@media(max-width: 368px){
-  .about .content .col-right .btn{
-    width: 90px;
-  }
-} */
 
 /* Default state */
 .fa-arrow-down {
@@ -369,17 +358,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-/* 
-.skills .content .col-left{
-  position: relative;
-  width: 46%;
-  text-align: justify;
-} */
-
-/* .skills .content .col-left .content-title{
-  margin-bottom: 20px;
-  
-} */
 
 .skills .content .col-right{
   position: relative;
@@ -554,16 +532,6 @@ body{
 .hidden-work{
   display: none;
 }
-
-/* .hidden-work .card-img img{
-
-  margin-left: 0%;
-  width: 350px; 
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition:.5s ease;
-} */
 
 .hidden-work .card-img img:hover{
   transform: scale(1.1);
@@ -972,6 +940,7 @@ body{
 
   header .navigation{
     display: none;
+    text-decoration: none;
   }
 
   header .navigation.active{
@@ -994,14 +963,18 @@ body{
     color: #000;
     font-size: 1.2em;
     margin: 10px;
-    padding: 0 20px;
+    padding: 0px;
     border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
   }
 
   header .navigation a:hover{
-    background: #3a6cf4;
-    color: #fff;
-    transition: 0.3s ease;
+    background: none;
+    text-decoration: none;
+    text-underline-offset: 2px;
+    color:#0486ff;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
   }
 
   .menu-btn{
