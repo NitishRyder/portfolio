@@ -6,16 +6,11 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  max-width: 100%;
 }
 body {
   overflow-x: hidden;
 }
-
-img, div {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
 
 section{
   padding: 100px 200px;
