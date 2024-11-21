@@ -28,6 +28,56 @@ section{
   background-attachment: fixed;
 }
 
+/* Skills Section */
+.skills-section {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #2b1055;
+  color: #fff;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px 30px;
+  justify-items: center;
+}
+
+.skill-item {
+  background-color: #1b1b32;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+
 @media(max-width: 468px){
 
   .main{
