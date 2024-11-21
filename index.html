@@ -9,6 +9,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script>
+      emailjs.init("x9LlRc8SrL2vf3s2s"); // Replace with your EmailJS user ID
+    </script>
 
     <!--Favicon-->
     <link rel="icon" href="./images/favicon.jpg" type="image/x-icon" />
@@ -102,57 +109,94 @@
     <section class="skills" id="skills">
       <div class="title reveal">
         <h2 class="section-title"><i class="fa fa-code"></i> My Skills</h2>
-      </div><br><br>
-        <div class="skills-grid">
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
-            <p>Azure</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" />
-            <p>AWS</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" />
-            <p>GitHub</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="CSS3" />
-            <p>Java</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="ReactJS" />
-            <p>ReactJS</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS" />
-            <p>NodeJS</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
-            <p>Bootstrap</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5" />
-            <p>HTML5</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="CSS3" />
-            <p>CSS3</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" alt="JavaScript" />
-            <p>JavaScript</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-            <p>Python</p>
-          </div>
-          <div class="skill-item">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-            <p>MySQL</p>
-          </div>
-        </div>      
+      </div>
+      <br /><br />
+      <div class="skills-grid">
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+            alt="Azure"
+          />
+          <p>Azure</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+            alt="AWS"
+          />
+          <p>AWS</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            alt="GitHub"
+          />
+          <p>GitHub</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+            alt="CSS3"
+          />
+          <p>Java</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="ReactJS"
+          />
+          <p>ReactJS</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="NodeJS"
+          />
+          <p>NodeJS</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+            alt="Bootstrap"
+          />
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg"
+            alt="HTML5"
+          />
+          <p>HTML5</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg"
+            alt="CSS3"
+          />
+          <p>CSS3</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
+            alt="JavaScript"
+          />
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python"
+          />
+          <p>Python</p>
+        </div>
+        <div class="skill-item">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="MySQL"
+          />
+          <p>MySQL</p>
+        </div>
+      </div>
     </section>
 
     <section class="education" id="education">
@@ -380,17 +424,15 @@
             <div class="input-box">
               <input type="submit" class="send-btn" id="sendBtn" value="Send" />
             </div>
+            <!-- Acknowledgment will appear here, not inside the text fields -->
+            <div id="notification" class="notification">
+              <div class="form-status" id="formStatus"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Acknowledgment will appear here, not inside the text fields -->
-    <div id="notification" class="notification"></div>
-    <div class="form-status" id="formStatus">
-
-    </div>
-  </div>
-    
     <footer class="footer">
       <div class="row">
         <!-- Column 1: Texts -->

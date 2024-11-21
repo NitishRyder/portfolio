@@ -84,59 +84,40 @@ document.getElementById("sendBtn").addEventListener("click", function (event) {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
-  const notification = document.getElementById("notification");
+  const formStatus = document.getElementById("formStatus");
 
-  // Clear previous notifications
-  notification.style.display = "none";
-  notification.classList.remove("success", "error");
-  notification.innerHTML = "";
-
-  // Validate fields
-
-  // if (!name) {
-  //   notification.innerHTML = "Please enter your name.";
-  //   notification.classList.add("error");
-  //   notification.style.display = "block";
-  // } else if (!email) {
-  //   notification.innerHTML = "Please enter your email.";
-  //   notification.classList.add("error");
-  //   notification.style.display = "block";
-  // } else {
-  //   // Email validation regex
-  //   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  //   if (!emailPattern.test(email)) {
-  //     notification.innerHTML = "Invalid email format. Please enter a valid email address.";
-  //     notification.classList.add("error");
-  //     notification.style.display = "block";
-  //   } else if (!message) {
-  //     notification.innerHTML = "Please enter your message.";
-  //     notification.classList.add("error");
-  //     notification.style.display = "block";
-  //   } else {
-  //     // If all fields are valid, display a success message
-  //     notification.innerHTML = "SENT &#10003;"; // Tick icon
-  //     notification.classList.add("success");
-  //     notification.style.display = "block";
-  //   }
-  // }
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Email validation
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   if (!name || !email || !message) {
-    formStatus.innerHTML = '<span class="error-icon">&#10071;</span>Please fill out all fields.';
-    formStatus.style.color = 'red';
+    formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Please fill out all fields.';
+    formStatus.style.color = "red";
   } else if (!emailPattern.test(email)) {
     formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Invalid email format.';
-    formStatus.style.color = 'red';
+    formStatus.style.color = "red";
   } else {
-    formStatus.innerHTML = '<span class="success-icon">&#10003;</span> SENT';
-    formStatus.style.color = 'green';
-  }
+    // Send email using EmailJS
+    emailjs.send("service_8z9ijdl", "template_axkyu1v", {
+      name: name,
+      email: email,
+      message: message,
+    })
+    .then(function () {
+      formStatus.innerHTML = '<span class="success-icon">&#10003;</span> Message sent successfully!';
+      formStatus.style.color = "green";
+    })
+    .catch(function (error) {
+      formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Failed to send message.';
+      formStatus.style.color = "red";
+    });
 
-  // Clear the form fields after validation attempt (even if failed)
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
+    // Clear form fields
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+  }
 });
+
 
 
 
