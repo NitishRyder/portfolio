@@ -118,7 +118,26 @@ document.getElementById("sendBtn").addEventListener("click", function (event) {
   }
 });
 
+// Scroll reveal effect
+window.addEventListener("scroll", revealSections);
 
+function revealSections() {
+  const reveals = document.querySelectorAll(".reveal");
+  reveals.forEach((section) => {
+    const windowHeight = window.innerHeight;
+    const revealTop = section.getBoundingClientRect().top;
+    const revealPoint = 100; // Start revealing when 100px above the viewport bottom
+
+    if (revealTop < windowHeight - revealPoint) {
+      section.classList.add("active");
+    } else {
+      section.classList.remove("active");
+    }
+  });
+}
+
+// Initial call to ensure visible elements are revealed on page load
+document.addEventListener("DOMContentLoaded", revealSections);
 
 
 
