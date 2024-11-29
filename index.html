@@ -9,21 +9,15 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/dist/email.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-      emailjs.init("x9LlRc8SrL2vf3s2s"); // Replace with your EmailJS user ID
+      emailjs.init("5N5l8Y0nSyY2VqM9l");
     </script>
     <script>
-      document.addEventListener('contextmenu', function(e) {
+      document.addEventListener("contextmenu", function (e) {
         e.preventDefault();
       });
     </script>
-    
-    
-
     <!--Favicon-->
     <link rel="icon" href="./images/favicon.jpg" type="image/x-icon" />
   </head>
@@ -82,6 +76,7 @@
       </div>
       <div class="content">
         <div class="column col-left reveal">
+          <br /><br />
           <div class="img-card">
             <img src="images/profileResized.jpg" alt="" />
           </div>
@@ -154,13 +149,13 @@
           />
           <p>ReactJS</p>
         </div>
-        <div class="skill-item">
+        <!-- <div class="skill-item">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
             alt="NodeJS"
           />
           <p>NodeJS</p>
-        </div>
+        </div> -->
         <div class="skill-item">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
@@ -224,7 +219,10 @@
           </div>
           <div class="info">
             <h3>Integrated MTech in Software Engineering</h3>
-            <h5>Vellore Institute of Technology, Vellore.</h5>
+            <h5>
+              Vellore Institute of Technology,<br />
+              Vellore.
+            </h5>
             <br />
             <h5><span>CGPA: 8.77</span></h5>
           </div>
@@ -403,6 +401,7 @@
       </div>
     </section>
 
+    <!-- Contact Form -->
     <section class="contact" id="contact">
       <div class="title reveal">
         <h2 class="section-title">

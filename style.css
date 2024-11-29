@@ -379,7 +379,7 @@ body{
 
 .about .content .col-left .img-card{
   position: relative;
-  width: 100%;
+  width: 90%;
   min-height: 450px;
 }
 
@@ -396,13 +396,13 @@ body{
 
   /* For smooth transition */
 .about .content .col-left .img-card img {
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
   border-radius: 10px; /* Optional: adds a slight border-radius */
 }
 
 /* Zoom & Shadow effect on hover */
 .about .content .col-left .img-card img:hover {
-  transform: scale(1.09); /* Zooms the image by 10% */
+  transform: scale(0.0); /* Zooms the image by 10% */
   transform: scale(1.1); /* Zoom effect */
   box-shadow: 0px 6px 9px #3a6cf4; /* Adds shadow on hover */
 }

@@ -77,46 +77,63 @@ document.getElementById('see-all-btn').addEventListener('click', function(event)
 
 
 //Get in touch
-document.getElementById("sendBtn").addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent form submission
+  // Initialize EmailJS with your User ID
+  emailjs.init('5N5l8Y0nSyY2VqM9l');
 
-  // Get input values
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const formStatus = document.getElementById("formStatus");
+  // Add event listener to the "Send" button
+  document.getElementById('sendBtn').addEventListener('click', function (e) {
+    e.preventDefault();
 
-  // Email validation
-  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // Collect input values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const formStatus = document.getElementById('formStatus');
 
-  if (!name || !email || !message) {
-    formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Please fill out all fields.';
-    formStatus.style.color = "red";
-  } else if (!emailPattern.test(email)) {
-    formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Invalid email format.';
-    formStatus.style.color = "red";
-  } else {
-    // Send email using EmailJS
-    emailjs.send("service_8z9ijdl", "template_axkyu1v", {
-      name: name,
-      email: email,
-      message: message,
-    })
-    .then(function () {
-      formStatus.innerHTML = '<span class="success-icon">&#10003;</span> Message sent successfully!';
-      formStatus.style.color = "green";
-    })
-    .catch(function (error) {
-      formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Failed to send message.';
+    // Email validation pattern
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Validate input fields
+    if (!name || !email || !message) {
+      formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Please fill out all fields.';
       formStatus.style.color = "red";
-    });
+    } else if (!emailPattern.test(email)) {
+      formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Invalid email format.';
+      formStatus.style.color = "red";
+    } else {
+      // Clear the status message and show 'Sending...'
+      formStatus.innerHTML = 'Sending...';
+      formStatus.style.color = 'green';
 
-    // Clear form fields
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-  }
-});
+      // Send email using EmailJS
+      emailjs.send('service_8z9ijdl', 'template_ai29wdu', {
+        name: name,
+        email: email,
+        message: message,
+      })
+        .then(function () {
+          formStatus.innerHTML = '<span class="success-icon">&#9989;</span> Message sent successfully!';
+          formStatus.style.color = 'green';
+
+          // Clear form fields after successful submission
+          document.getElementById('name').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('message').value = '';
+        })
+        .catch(function (error) {
+          formStatus.innerHTML = '<span class="error-icon">&#10071;</span> Failed to send the message.';
+          formStatus.style.color = 'red';
+          console.error(error);
+          
+          // Clear form fields even on failure
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+        });
+    }
+  });
+
+
 
 // Scroll reveal effect
 window.addEventListener("scroll", revealSections);
@@ -139,6 +156,33 @@ function revealSections() {
 // Initial call to ensure visible elements are revealed on page load
 document.addEventListener("DOMContentLoaded", revealSections);
 
+// Disable right-click menu
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// Disable specific keyboard shortcuts (F12, Ctrl+Shift+I, Ctrl+Shift+J)
+document.addEventListener('keydown', function(e) {
+  // Disable F12
+  if (e.keyCode === 123) {
+      e.preventDefault();
+  }
+
+  // Disable Ctrl+Shift+I and Ctrl+Shift+J
+  if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) {
+      e.preventDefault();
+  }
+
+  // Disable F12 when DevTools is opened (on Mac it's Cmd+Option+I)
+  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+      e.preventDefault();
+  }
+});
+
+// Disable opening DevTools using right-click (optional)
+window.oncontextmenu = function() {
+  return false;
+};
 
 
 
